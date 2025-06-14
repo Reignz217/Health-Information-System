@@ -184,7 +184,7 @@ export default function Signup() {
                         </div>
                         {errors.cpassword && <p className="text-red-600 text-sm mt-1 ml-2">{errors.cpassword}</p>}
                     </div>
-                    <div>
+                    <div className="w-full">
                         <select name="role" className={`px-5 py-3 bg-slate-200 rounded-2xl md:w-96 w-full text-gray-500 font-medium ${errors.role ? 'border-red-700 border' : ''}`}>
                             <option value=''>Select Role</option>
                             <option value='User'>User</option>

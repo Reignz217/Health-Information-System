@@ -223,20 +223,20 @@ export default function Admin_Dashboard() {
         {/* Create Appointment / Event */}
           <div className='rounded-2xl shadow-2xl h-96 overflow-y-auto'>
               <h5 className='md:px-5 md:py-2 px-3 py-2 bg-[#227C67] text-center text-white uppercase font-bold rounded-t-2xl'>Create Appointment / Event</h5>
-              <form ref={form} onSubmit={onSubmit} className='md:px-5 px-3 pb-2 md:pt-5 pt-3 flex flex-col gap-4 relative'>
+              <form ref={form} onSubmit={onSubmit} className='md:px-5 px-3 pb-2 md:pt-5 pt-3 flex flex-col gap-4 relative w-full'>
                 {result && <p className='text-green-500 self-center absolute top-0'>{result}</p>}
                 {error && <p className='text-red-500 self-center absolute top-0'>{error}</p>}
-                <div className='flex flex-col gap-2'>
+                <div className='flex flex-col gap-2 w-full'>
                   <label className='text-lg font-medium' htmlFor='title'>Title:</label>
-                  <input type='text' name='title' id='title' placeholder='Title' className='px-5 md:py-2 py-1.5 bg-slate-200 rounded-2xl'/>
+                  <input type='text' name='title' id='title' placeholder='Title' className='px-5 md:py-2 py-1.5 bg-slate-200 rounded-2xl w-full'/>
                 </div>
-                <div className='flex flex-col gap-2'>
+                <div className='flex flex-col gap-2 w-full'>
                   <label className='text-lg font-medium' htmlFor='date_start'>Start Date:</label>
-                  <input type='date' name='date_start' id='date_start' placeholder='Start Date' className='px-5 md:py-2 py-1.5 bg-slate-200 rounded-2xl'/>
+                  <input type='date' name='date_start' id='date_start' placeholder='Start Date' className='px-5 md:py-2 py-1.5 bg-slate-200 rounded-2xl w-full'/>
                 </div>
-                <div className='flex flex-col gap-2'>
+                <div className='flex flex-col gap-2 w-full'>
                   <label className='text-lg font-medium' htmlFor='date_end'>End Date:</label>
-                  <input type='date' name='date_end' id='date_end' placeholder='End Date' className='px-5 md:py-2 py-1.5 bg-slate-200 rounded-2xl'/>
+                  <input type='date' name='date_end' id='date_end' placeholder='End Date' className='px-5 md:py-2 py-1.5 bg-slate-200 rounded-2xl w-full'/>
                 </div>
                 <button className='py-2 bg-[#227C67] text-white font-bold rounded-3xl md:w-40 w-30 cursor-pointer self-center'>Create</button>
               </form>

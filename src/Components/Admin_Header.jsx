@@ -10,8 +10,9 @@ export default function Admin_Header({handleClick}) {
             <h4 className="md:text-2xl text-lg font-medium text-center"><strong>Health</strong> Information System</h4>
             <AlignJustify onClick={handleClick} className="lg:hidden cursor-pointer"/>
         </div>
+        <Link to="/user_dashboard" className="hidden md:block text-center w-96"><p className="hover:underline hover:text-blue-400">Click Here to View User Dashboard</p></Link>
         <Link to="/view_user" className="hidden md:block">
-            <img className="w-12 rounded-full" 
+            <img className="w-12 rounded-full"
             src="/Default.jpg" alt="Profile Pic"/>
         </Link>
     </div>
