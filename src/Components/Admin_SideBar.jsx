@@ -1,7 +1,7 @@
 import {House, Files, Printer, ChartLine, User, LogOut, Icon, ChevronLast} from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 
-export default function SideBar({menu, setMenu}) {
+export default function Admin_SideBar({menu, setMenu}) {
 
     const nav = [
         {Name: 'Dashboard', Path: '/' , Icon: <House/>},

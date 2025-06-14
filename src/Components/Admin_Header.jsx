@@ -1,7 +1,7 @@
 import { AlignJustify } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export default function Header({handleClick}) {
+export default function Admin_Header({handleClick}) {
 
   return (
     <div className="bg-[#227C67] py-3 md:px-10 px-5 flex justify-between text-white items-center gap-5">

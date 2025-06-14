@@ -1,7 +1,7 @@
 
 import { Outlet } from 'react-router-dom'
-import Admin_Header from '../Components/ADmin_Header'
-import SideBar from '../Components/Admin_SideBar'
+import Admin_Header from '../Components/Admin_Header'
+import Admin_SideBar from '../Components/Admin_SideBar'
 import { useState } from 'react';
 
 export default function AdminLayout() {
@@ -18,7 +18,7 @@ export default function AdminLayout() {
           <Admin_Header handleClick={handleClick}/>
       </div>
       <div className='flex-1 flex overflow-y-auto'>
-        <SideBar menu={menu} setMenu={setMenu}/>
+        <Admin_SideBar menu={menu} setMenu={setMenu}/>
         <Outlet/>
       </div>
     </div>
