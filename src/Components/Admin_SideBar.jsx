@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 export default function Admin_SideBar({menu, setMenu}) {
 
     const nav = [
-        {Name: 'Dashboard', Path: '/' , Icon: <House/>},
+        {Name: 'Dashboard', Path: '/dashboard' , Icon: <House/>},
         {Name: 'Records', Path:  ['/records', '/add_patient', '/view_patient', '/edit_patient'], Icon: <Files/>},
         {Name: 'Issuance', Path: '/issuance', Icon: <Printer/>},
         {Name: 'Analytics', Path: '/analytics', Icon: <ChartLine/>},
