@@ -1,5 +1,5 @@
-import { Eye, EyeOff, Lock, User } from "lucide-react";
-import { use, useRef, useState } from "react";
+import { Eye, EyeOff, Lock, User, X } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Login() {
@@ -33,9 +33,38 @@ export default function Login() {
             }
     }
     /* END */
+    /* Modal Info */
+    const [show, setShow] = useState(true); // default is visible
+
+useEffect(() => {
+  const hideModal = localStorage.getItem("hideModal");
+  if (hideModal === "true") {
+    setShow(false); // user already closed it before
+  }
+}, []);
+
+const handleCloseModal = () => {
+  setShow(false); // hide it now
+  localStorage.setItem("hideModal", "true"); // remember user's choice
+};
+
+
+
 
   return (
     <div className="flex flex-col lg:flex-row h-screen pb-10 lg:pb-0">
+        {show && (
+            <div className="absolute flex justify-center items-center bg-black/80 top-0 w-full h-full z-10">
+                <div className="bg-gray-300 rounded-2xl md:w-2/3 md:h-96 h-70 flex flex-col justify-between md:p-10 p-5 mx-3 fade-in-up">
+                    <X className="cursor-pointer border rounded-full p-1 self-end " onClick={handleCloseModal} size={35}/>
+                    <div className=" flex justify-center items-center text-center h-full">   
+                        <p className="md:text-2xl text-lg">This is just a frontend for demo purposes only. There is no Backend. if you want to go to dashboard,
+                            just put any details on the fields and click on the button 2 times. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )}
         <div className="flex-1 flex flex-col justify-between items-center py-20 text-white text-center relative fade-in-left">
             <div className="bg-[#227C67] absolute top-0 w-full h-3/4 lg:h-full  rounded-br-full rounded-bl-full lg:rounded-bl-none -z-1"></div>
             <div>
@@ -70,7 +99,7 @@ export default function Login() {
                             <EyeOff className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer" onClick={()=>handleClick()}/> 
                         )}
                     </div>
-                    <button className="py-3 bg-[#227C67] hover:bg-[#549686] text-white font-bold w-40 rounded-3xl cursor-pointer"><Link to="/dashboard">Login</Link></button>
+                    <button className="py-3 bg-[#227C67] hover:bg-[#549686] text-white font-bold w-40 rounded-3xl cursor-pointer"><Link to="/dashboard" onClick={handleCloseModal}>Login</Link></button>
                     <p className="font-medium text-sm">Forgot your password? <Link to="/forgot_pass" className="text-red-500 hover:underline">Click here!</Link></p>
                 </form>
             </div>
