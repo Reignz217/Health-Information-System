@@ -59,7 +59,7 @@ const handleCloseModal = () => {
                     <X className="cursor-pointer border rounded-full p-1 self-end " onClick={handleCloseModal} size={35}/>
                     <div className=" flex justify-center items-center text-center h-full">   
                         <p className="md:text-2xl text-lg">This is just a frontend for demo purposes only. There is no Backend. if you want to go to dashboard,
-                            just put any details on the fields and click on the button 1 or 2 times. 
+                            just put any details on the fields and click on the button 1 or 2 times. or just add <span className="text-[#227C67]">/dashboard</span> on the url above. 
                         </p>
                     </div>
                 </div>
