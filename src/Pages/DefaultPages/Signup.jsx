@@ -107,8 +107,8 @@ export default function Signup() {
                     <h4 className="md:text-4xl text-xl font-bold">Healthy Life, Happy Life!</h4>
                     <p className="md:text-xl text-lg font-medium"> Prioritizing your health is the first step toward happiness.</p>
                 </div>
-                <div className="flex flex-col items-center gap-3 mt-10 text-2xl font-medium">
-                    <Link to="/" className="px-8 py-2 bg-[#227C67] hover:bg-[#549686] text-lg rounded-3xl border-2 uppercase">Sign In</Link>
+                <div className="flex flex-col items-center gap-3 mt-10 md:text-2xl text-sm font-medium">
+                    <Link to="/" className="md:px-8 md:py-2 px-3 py-2 bg-[#227C67] hover:bg-[#549686] md:text-lg tex-sm rounded-3xl border-2 uppercase">Sign In</Link>
                 </div>
             </div>
             <img className="lg:block hidden h-3/4 fade-in-right" src="./register.svg"/>

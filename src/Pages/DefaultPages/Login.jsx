@@ -66,7 +66,7 @@ const handleCloseModal = () => {
             </div>
         )}
         <div className="flex-1 flex flex-col justify-between items-center py-20 text-white text-center relative fade-in-left">
-            <div className="bg-[#227C67] absolute top-0 w-full h-3/4 lg:h-full  rounded-br-full rounded-bl-full lg:rounded-bl-none -z-1"></div>
+            <div className="bg-[#227C67] absolute top-0 w-full h-2/3 lg:h-full  rounded-br-full rounded-bl-full lg:rounded-bl-none -z-1"></div>
             <div>
                 <div className="flex flex-col items-center">
                     <img src="./flogo.png"/>
